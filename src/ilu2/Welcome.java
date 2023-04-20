@@ -3,7 +3,14 @@ package ilu2;
 public class Welcome {
 	public static String welcome(String input) {
 		StringBuilder output = new StringBuilder();
-		output.append("Hello, " + firstLetterUpperCase(input));
+		output.append("Hello, ");
+		
+		if (input.trim().isEmpty()) {
+			output.append("my friend");
+		} else {
+			output.append(firstLetterUpperCase(input));
+		}
+		
 		return output.toString();
 		
 	}
@@ -11,5 +18,6 @@ public class Welcome {
 		input = input.substring(0, 1).toUpperCase() + input.substring(1);
 		return input;
 	}
+	
 	
 }
