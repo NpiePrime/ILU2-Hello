@@ -8,7 +8,8 @@ class WelcomeTest {
 
 	@Test
 	void testWelcome() {
-		fail("Not yet implemented");
+		assertEquals(Welcome.welcome("bob"), "Hello, Bob");
+		assertNotEquals(Welcome.welcome("bob"), "Hello, bob");
 	}
 
 }
